@@ -28,7 +28,7 @@ public enum LiquidFloatingActionButtonAnimateStyle : Int {
 }
 
 @IBDesignable
-@objc open class LiquidFloatingActionButton : UIView {
+open class LiquidFloatingActionButton : UIView {
 
     fileprivate let internalRadiusRatio: CGFloat = 20.0 / 56.0
     open var cellRadiusRatio: CGFloat      = 0.38
@@ -112,7 +112,7 @@ public enum LiquidFloatingActionButtonAnimateStyle : Int {
         
         // rotate plus icon
         CATransaction.setAnimationDuration(0.8)
-        self.plusLayer.transform = CATransform3DMakeRotation((CGFloat(M_PI) * rotationDegrees) / 180, 0, 0, 1)
+        self.plusLayer.transform = CATransform3DMakeRotation((CGFloat(Double.pi) * rotationDegrees) / 180, 0, 0, 1)
 
         let cells = cellArray()
         for cell in cells {
@@ -445,7 +445,7 @@ class CircleLiquidBaseView : ActionBarBaseView {
 
 }
 
-@objc open class LiquidFloatingCell : LiquittableCircle {
+open class LiquidFloatingCell : LiquittableCircle {
     
     let internalRatio: CGFloat = 0.75
 
